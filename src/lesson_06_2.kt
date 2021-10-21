@@ -1,8 +1,8 @@
 fun main(){
     /*Передаем значения в экземпляр класса сразу.
     Это выражение будет работать,если в свойство самого класса внести добавления*/
-    val a = NumberInt02(10,5)
-    val b = NumberInt02(0,1)
+    val a = NumberInt01(10,5)
+    val b = NumberInt01(0,1)
 
     /*вызываем функцию для нашего экземпляра класса*/
     a.inc()
@@ -22,10 +22,15 @@ fun main(){
 //        step = s
 //    }
 
-/*это первичный конструктор*/
-class NumberInt02(n: Int, s: Int) {
-    var number: Int = n
-    var step: Int = s
+/*это первичный конструкторб через this*/
+class NumberInt01() {
+    var number: Int = 0
+    var step: Int = 1
+
+    constructor(n: Int, s: Int) : this (){
+        number = n
+        step = s
+    }
 
 
     fun inc(){
