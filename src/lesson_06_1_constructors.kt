@@ -13,14 +13,19 @@ fun main(){
 
 }
 /*Это вторичный конструктор, а не параметры, как у функций*/
-class NumberInt01 {
-    var number: Int
-    var step: Int
+//class NumberInt01 {
+//    var number: Int
+//    var step: Int
+//
+//    constructor(n: Int, s: Int){
+//        number = n
+//        step = s
+//    }
 
-    constructor(n: Int, s: Int){
-        number = n
-        step = s
-    }
+/*это первичный конструктор*/
+class NumberInt01(n: Int, s: Int) {
+    var number: Int = n
+    var step: Int = s
 
 
     fun inc(){
