@@ -1,7 +1,7 @@
 fun main(){
     /*создан объект. это экземпляр класса numberint*/
-    val a = numberint()
-    val b = numberint()
+    val a = numberint1()
+    val b = numberint1()
 
     /*установили свойства для объекта а*/
     a.number = 10
@@ -17,7 +17,7 @@ fun main(){
     println("b: ${b.number}")
 }
 
-class numberint {
+class numberint1 {
     var number = 0
     var step = 1
 
