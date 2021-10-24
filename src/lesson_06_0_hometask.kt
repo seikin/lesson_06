@@ -1,4 +1,4 @@
-/*hometask Alexey Seikin
+/* hometask Alexey Seikin
 
 1. Создайте класс SampleMath, конструктор которого принимает в себя два целых числа x и y
 2. Создайте экземпляр данного класса
@@ -40,28 +40,25 @@ fun main(){
 class SampleMath(var x: Double, var y: Double){
 
     fun addition(): Double {
-        val add = x + y
-        return add
+        return x + y
     }
 
     fun division(): Double {
-        if (y == 0.0) {
+        return if (y == 0.0) {
             val div = x / 1
-            return div
+            div
         } else {
             val div = x / y
-            return div
+            div
         }
     }
 
     fun multiplication(): Double {
-        val multi = x * y
-        return multi
+        return x * y
     }
 
     fun subtraction(): Double {
-        val subtr = x - y
-        return subtr
+        return x - y
     }
 
 }

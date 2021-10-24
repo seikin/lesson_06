@@ -1,21 +1,23 @@
 fun main(){
-    /*создаем новый экземпляр класса NumberInt*/
-    val a = NumberInt()
-    val b = NumberInt()
-    /*присваиваем экземпляру a класса NumberInt свойство number*/
+    /*создан объект. это экземпляр класса numberint*/
+    val a = numberint()
+    val b = numberint()
+
+    /*установили свойства для объекта а*/
     a.number = 10
     a.step = 5
 
-    /*вызываем функцию для нашего экземпляра класса*/
+    /*вызов функции-члена. вызывается только через объект данного класса. данные берет не по умолчанию*/
     a.inc()
+
+    /*функция член выполнена со значениями по умолчанию, указанными ы теле класса*/
     b.dec()
 
     println("a: ${a.number}")
     println("b: ${b.number}")
-
 }
 
-class NumberInt {
+class numberint {
     var number = 0
     var step = 1
 
