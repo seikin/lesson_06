@@ -1,18 +1,20 @@
 import kotlin.random.Random
 
-fun main() {
-    val arrayGenerator = ArrayGenerator(10)
+fun main(){
+    val arrayGenerator = ArrayGenerator(560117)
     arrayGenerator.printArray()
     println()
     println("Сумма элементов массива: ${arrayGenerator.sum()}")
     println("Среднее арифметическое: ${arrayGenerator.average()}")
+
 }
 
-class ArrayGenerator(size: Int) {
-    private val array: Array<Int>
+class ArrayGenerator(var size: Int) {
+    private val array: Array <Int>
 
     init {
         array = generateArray(size)
+
     }
 
     fun average(): Double {
@@ -28,14 +30,14 @@ class ArrayGenerator(size: Int) {
     }
 
     fun printArray() {
-        print("Значения массива:")
+        println("Значения массива: ")
         for (i in array.indices) {
             print("${array[i]}")
-            if (i < array.size - 1) print(", ")
+            if (i < array.size - 1) print(",")
         }
     }
 
-    fun generateArray(s: Int): Array<Int> {
+    private fun generateArray(s: Int): Array<Int> {
         val array = Array(s) { 0 }
         for (i in array.indices) {
             array[i] = Random.nextInt(0, 100)
